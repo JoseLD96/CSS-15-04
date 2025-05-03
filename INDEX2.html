@@ -364,11 +364,14 @@ las doscientas millas, de conformidad con la ley y
       <h2> Formulario de registro </h2>
 
       <form action="form22-04.html" method="post">
-        <p> <label for="nombre"> Nombre: <input type="text" id="nombre" autofocus> </label></p>
-        <p> <label for="apellido"> Apellido: <input type="text" id="apellido"> </label></p>
-        <p> <label for="edad"> Edad: <input type="number" id="edad" min="18" max="50"> </label></p>
+        <p> <label for="nombre"> Nombre: <input type="text" id="nombre" class="datosPersonales" required> </label></p>
+        <p> <label for="apellido"> Apellido: <input type="text" id="apellido" class="datosPersonales"> </label></p>
+        <p> <label for="edad"> Edad: <input type="number" id="edad" class="datosPersonales" min="18" max="50"> </label></p>
         <p> <label for="Observación"> Observación: <textarea name="Observación" id="Observación"
-          style="font-size: 18px; width: 200px; height: 100px;"></textarea> </label></p>
+          style="font-size: 18px; width: 200px; height: 100px;">
+        </textarea> 
+        </label>
+      </p>
            <p>
             <label for="Estatura">  Estatura: 
               <select name="grupoestatura" id="estatura">
@@ -438,9 +441,16 @@ las doscientas millas, de conformidad con la ley y
         <label for="email"> INGRESE EMAIL: 
           <input style="font-size:25px" type="email" name="correo" id="email" placeholder="@certus.edu.pe">
          </label> 
+         <br>
+         
+         <button style="font-size: 30px;" type="button" 
+         onclick="FCapturarNombre()">
+          Copiar Nombre a Observaciones</button>
+          <br> <br> <br>
         <button type="submit"> Ingresar</button> <label for="resetear"> RESETEAR: 
           <input style="font-size:25px" type="reset" name="resetear" id="resetear">
          </label>
+
       </form>
       <div style="font-size: 30px;"> Contenedor Resultado en Java Script  </div> 
       <br>
@@ -477,7 +487,21 @@ las doscientas millas, de conformidad con la ley y
         onclick="FCambioClase1()"> CAMBIO POR CLASE </button>
         <button style="font-size: 25px;" style="color: blueviolet";
         onclick="FCambioTag1()"> CAMBIO POR Tag h2</button>
-       </section>
+
+        
+        
+
+       <h2> Agregación de texto con concatenación Permanente </h2>
+       <button onclick="FAgregarTextoPermanente()"> Agregar texto a la primera variable </button>
+
+      </section>
+
+      <h2> Uso de Create Elemento </h2>
+
+      <section id="idCrearH1">
+       <button onclick="FCrearH1()" > Crear H1</button>
+
+      </section>
 
 </body>
 </html>
